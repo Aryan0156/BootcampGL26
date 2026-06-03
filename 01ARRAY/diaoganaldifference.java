@@ -33,5 +33,6 @@ public class diaoganaldifference {
         System.out.println(s);
         int diff = Math.abs(p - s);
         System.out.println("Difference in Array "+ diff);
+        sc.close();
     }
 }

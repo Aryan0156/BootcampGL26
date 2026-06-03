@@ -18,6 +18,8 @@ public class VowelRemovals {
         }
         for(char x :v)
             System.out.print(x);
+        sc.close();
+        
 
     }
 }

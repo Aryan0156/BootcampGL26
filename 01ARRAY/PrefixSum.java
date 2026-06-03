@@ -25,6 +25,7 @@ public class PrefixSum {
 
 
        System.out.println("The prefix sum is " + sum);
+       sc.close();
 
     }
 }

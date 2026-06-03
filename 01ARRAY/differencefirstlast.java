@@ -16,6 +16,8 @@ public class differencefirstlast {
         int diff =0;
         diff = Math.abs(arr[0]-arr[n-1]);
         System.out.println("The difference between the two elements is "+ diff);
+        sc.close();
+        
 
     }
 }

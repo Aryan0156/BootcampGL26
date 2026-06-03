@@ -25,6 +25,7 @@ public class groupanagaram {
         for(ArrayList<String> list : map.values()){
             System.out.println(list);
         }
+        sc.close();
 
     }
 }

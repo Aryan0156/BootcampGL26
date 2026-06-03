@@ -44,6 +44,7 @@ public class Minus {
             }
             System.out.println();
         }
+        sc.close();
 
     }
 

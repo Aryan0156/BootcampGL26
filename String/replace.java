@@ -69,7 +69,9 @@ public class replace {
 
         if (longest.equals("")) {
             System.out.println("No repeated substring found");
+            sc.close();
             return;
+            
         }
 
 

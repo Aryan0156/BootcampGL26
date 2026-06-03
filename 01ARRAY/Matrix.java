@@ -72,5 +72,6 @@ public class Matrix {
             System.out.println("_____________________________________________________________");
 
         } while (choice != 3);
+        sc.close();
     }
 }

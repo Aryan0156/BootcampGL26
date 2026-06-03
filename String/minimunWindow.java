@@ -57,5 +57,6 @@ public class minimunWindow {
             System.out.println("Minimum Window: "
                     + s.substring(start, start + minLen));
         }
+        sc.close();
     }
 }

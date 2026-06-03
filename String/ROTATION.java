@@ -25,5 +25,6 @@ public class ROTATION {
             }
         }
         System.out.println("After Rotation :\n" + new String(rotate));
+        sc.close();
     }
 }

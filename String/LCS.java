@@ -28,5 +28,6 @@ public class LCS {
         }
 
         System.out.println("Length of LCS: " + dp[m][n]);
+        sc.close();
     }
 }

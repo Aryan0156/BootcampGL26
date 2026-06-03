@@ -28,5 +28,6 @@ public class rightAngletranspose {
             }
             System.out.println();
         }
+        sc.close();
     }
 }

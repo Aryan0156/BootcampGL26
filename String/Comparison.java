@@ -11,6 +11,7 @@ public class Comparison {
         else{
             System.out.println("String is not same");
         }
+        sc.close();
 
     }
 }

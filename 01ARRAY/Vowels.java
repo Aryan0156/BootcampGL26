@@ -18,5 +18,6 @@ public class Vowels {
         }
         System.out.println("The vowels are: " +count);
         System.out.println("The vowels are: " +vowels);
+        sc.close();
     }
 }

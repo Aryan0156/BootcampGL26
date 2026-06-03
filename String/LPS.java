@@ -30,5 +30,6 @@ public class LPS {
         }
 
         System.out.println("Length of LPS = " + dp[0][n - 1]);
+        sc.close();
     }
 }

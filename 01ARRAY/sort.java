@@ -29,6 +29,6 @@ public class sort {
        for(int x: v){
            System.out.print(x+" ");
        }
-
+sc.close();
     }
 }

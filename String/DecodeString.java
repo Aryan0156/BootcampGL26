@@ -46,5 +46,6 @@ public class DecodeString {
         }
 
         System.out.println(current);
+        sc.close();
     }
 }

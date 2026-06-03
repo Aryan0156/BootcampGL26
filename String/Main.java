@@ -21,7 +21,7 @@ public class Main{
             System.out.print(x);
         }
         System.out.print(str1);
-
+sc.close();
 
     }
 }

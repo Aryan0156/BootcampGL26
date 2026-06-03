@@ -14,6 +14,6 @@ public class removal {
         for(char c : v){
             System.out.print(c);
         }
-
+        sc.close();
     }
 }

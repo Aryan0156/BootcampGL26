@@ -8,7 +8,9 @@ public class anagaram {
         int [] f = new int[26];
         if(s.length() != s1.length()){
             System.out.println("Not Anagram");
+            sc.close();
             return;
+            
         }
         for(int i = 0; i < s.length(); i++){
             f[s.charAt(i)-'a']++;
@@ -22,5 +24,7 @@ public class anagaram {
             }
         }
         System.out.println(flag?"anagram" :"not anagram");
+
+        sc.close();
     }
 }

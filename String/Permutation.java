@@ -18,6 +18,7 @@ public class Permutation {
         System.out.println("Enter the String");
         String str  = sc.nextLine();
         permute(str, "");
+        sc.close();
 
     }
 }

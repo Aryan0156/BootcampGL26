@@ -17,5 +17,6 @@ public class nonrepeating {
         for (int i = 0; i < v.length(); i++) {
             System.out.print(v.charAt(i));
         }
+        sc.close();
     }
 }

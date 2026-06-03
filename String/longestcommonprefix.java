@@ -30,5 +30,6 @@ public class longestcommonprefix {
         }
 
         System.out.println("Longest Common Prefix: " + prefix);
+        sc.close();
     }
 }

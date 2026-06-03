@@ -33,6 +33,7 @@ public class Main {
         else{
             System.out.println("There is no such element in the array");
         }
+        sc.close();
 
     }
 }

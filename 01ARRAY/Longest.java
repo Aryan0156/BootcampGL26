@@ -29,6 +29,7 @@ public class Longest {
             }
         }
         System.out.println(num + " is repeated by " + max);
+        sc.close();
 
     }
 }

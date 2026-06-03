@@ -28,6 +28,7 @@ public class fliptheArray {
             }
             System.out.println();
         }
+        sc.close();
     }
     }
 

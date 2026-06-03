@@ -35,5 +35,6 @@ public class Columnsum {
             }
         }
         System.out.println("The maximum sum is " + maxsum + " and the column number is " + element);
+        sc.close();
     }
 }

@@ -12,10 +12,12 @@ public class FirstNonRepeating {
 
             if (str.indexOf(ch) == str.lastIndexOf(ch)) {
                 System.out.println("First Non-Repeating Character: " + ch);
+                sc.close();
                 return;
             }
         }
 
         System.out.println(-1);
+        sc.close();
     }
 }

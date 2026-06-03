@@ -17,5 +17,6 @@ public class removeduplicate {
         for(char c : v){
             System.out.print(c);
         }
+        sc.close();
     }
 }

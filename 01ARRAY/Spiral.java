@@ -55,5 +55,6 @@ public class Spiral {
         }
 
         System.out.print(v+" ");
+        sc.close();
     }
 }

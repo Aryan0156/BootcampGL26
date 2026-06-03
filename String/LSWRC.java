@@ -25,5 +25,6 @@ public class LSWRC {
         }
 
         System.out.println("Length = " + maxLen);
+        sc.close();
     }
 }

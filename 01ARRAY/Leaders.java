@@ -23,5 +23,6 @@ public class Leaders {
         for(int i = v.size()-1; i >=0; i--){
             System.out.print(v.get(i) + " ");
         }
+        sc.close();
     }
 }
