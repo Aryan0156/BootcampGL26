@@ -14,14 +14,16 @@ public class valid {
                     return false;
                 }
             }
-            if(st.peek() == '(' && ch==')'
-                    || st.peek() =='{'  && ch =='}'
-                    || st.peek()=='[' && ch==']'){
-                st.pop();
-            }
-            else{
-                return false;
-            }
+            char top = st.peek();
+
+        if((top == '(' && ch == ')') ||
+           (top == '{' && ch == '}') ||
+          (top == '[' && ch == ']')){
+           st.pop();
+}
+         else{
+    return false;
+}
         }
         return st.isEmpty();
     }
