@@ -1,12 +1,13 @@
 import java.util.Scanner;
+
 public class NumberSum {
 
-    static class node{
+    static class node {
         int data;
         node next;
         node prev;
 
-        node(int data){
+        node(int data) {
             this.data = data;
             this.next = null;
             this.prev = null;
@@ -15,10 +16,10 @@ public class NumberSum {
 
     static node head = null;
 
-    static void insert(int data){
+    static void insert(int data) {
         node newnode = new node(data);
 
-        if(head == null){
+        if (head == null) {
             head = newnode;
             head.next = head;
             head.prev = head;
@@ -34,34 +35,59 @@ public class NumberSum {
         head.prev = newnode;
     }
 
-    static void display(){
-        if(head == null){
+    static void display() {
+        if (head == null) {
             System.out.println("List is empty");
             return;
         }
 
         node temp = head;
 
-        do{
+        do {
             System.out.print(temp.data + " <-> ");
             temp = temp.next;
-        }while(temp != head);
+        } while (temp != head);
 
-        
+        System.out.println("(head)");
     }
 
-    public static void main(String[] args){
+    static int sum() {
+        if (head == null) {
+            return 0;
+        }
+
+        int total = 0;
+        node temp = head;
+
+        do {
+            total += temp.data;
+            temp = temp.next;
+        } while (temp != head);
+
+        return total;
+    }
+
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter number of elements: ");
-        int n = sc.nextInt();
+        System.out.println("Enter elements (-1 to stop):");
 
-        for(int i=0;i<n;i++){
-            insert(sc.nextInt());
+        while (true) {
+            int n = sc.nextInt();
+
+            if (n == -1) {
+                break;
+            }
+
+            insert(n);
         }
 
+        System.out.println("\nCircular Doubly Linked List:");
         display();
+
+        System.out.println("Sum of all elements = " + sum());
+
         sc.close();
     }
 }
