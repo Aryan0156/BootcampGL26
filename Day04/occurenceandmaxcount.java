@@ -79,5 +79,6 @@ public class occurenceandmaxcount {
         display();
 
         System.out.println("Count = " + count());
+        sc.close();
     }
 }

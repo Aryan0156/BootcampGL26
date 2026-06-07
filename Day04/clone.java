@@ -72,6 +72,6 @@ public class clone {
         System.out.print("Cloned List  : ");
         display(clonedHead);
     }
-} {
+} 
     
-}
+
