@@ -7,12 +7,13 @@ public class search {
         for(int i = 0; i<n; i++){
             arr[i] = sc.nextInt();
         }
+        System.out.println("_________________________");
         int x = sc.nextInt();
         boolean flag = false;
         int min =0;
         for(int i = 0; i<n; i++){
             if(x == arr[i]){
-                min = i;
+                min = i+1;
                 flag = true;
             }
         }
