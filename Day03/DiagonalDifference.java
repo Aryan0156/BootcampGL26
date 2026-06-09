@@ -14,15 +14,15 @@ public class DiagonalDifference {
             }
         }
 
-        int primary = 0;
-        int secondary = 0;
+        int fd = 0;
+        int sd = 0;
 
         for(int i = 0; i < n; i++) {
-            primary += arr[i][i];
-            secondary += arr[i][n - 1 - i];
+            fd += arr[i][i];
+            sd += arr[i][n - 1 - i];
         }
 
-        int diff = Math.abs(primary - secondary);
+        int diff = Math.abs(fd - sd);
 
         System.out.println("Diagonal Difference = " + diff);
     }
