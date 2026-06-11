@@ -1,8 +1,8 @@
-class ListNode {
+class ListNodes{
     int data;
-    ListNode next;
+    ListNodes next;
 
-    ListNode(int data) {
+    ListNodes(int data) {
         this.data = data;
         this.next = null;
     }
@@ -10,17 +10,17 @@ class ListNode {
 
 public class RemoveLoopLinkedList {
 
-    static ListNode head = null;
+    static ListNodes head = null;
 
     static void insert(int data) {
-        ListNode newNode = new ListNode(data);
+        ListNodes newNode = new ListNodes(data);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        ListNode temp = head;
+        ListNodes temp = head;
 
         while (temp.next != null) {
             temp = temp.next;
@@ -30,8 +30,8 @@ public class RemoveLoopLinkedList {
     }
 
     static boolean hasLoop() {
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNodes slow = head;
+        ListNodes fast = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -46,8 +46,8 @@ public class RemoveLoopLinkedList {
     }
 
     static void removeLoop() {
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNodes slow = head;
+        ListNodes fast = head;
         boolean loopFound = false;
 
         while (fast != null && fast.next != null) {
@@ -81,7 +81,7 @@ public class RemoveLoopLinkedList {
     }
 
     static void display() {
-        ListNode temp = head;
+        ListNodes temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -100,8 +100,8 @@ public class RemoveLoopLinkedList {
         insert(50);
 
         // Creating loop: 50 -> 30
-        ListNode temp = head;
-        ListNode third = null;
+        ListNodes temp = head;
+        ListNodes third = null;
 
         while (temp.next != null) {
             if (temp.data == 30) {
