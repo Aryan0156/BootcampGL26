@@ -1,25 +1,25 @@
-class Node {
+class ListNode {
     int data;
-    Node next;
+    ListNode next;
 
-    Node(int data) {
+    ListNode(int data) {
         this.data = data;
     }
 }
 
 public class PalindromeLinkedList {
 
-    static Node head = null;
+    static ListNode head = null;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        Node temp = head;
+        ListNode temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -32,29 +32,26 @@ public class PalindromeLinkedList {
         if (head == null || head.next == null)
             return true;
 
-        Node slow = head;
-        Node fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
 
-       
         while (fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        
-        Node prev = null;
-        Node curr = slow;
+        ListNode prev = null;
+        ListNode curr = slow;
 
         while (curr != null) {
-            Node next = curr.next;
+            ListNode next = curr.next;
             curr.next = prev;
             prev = curr;
             curr = next;
         }
 
-        
-        Node first = head;
-        Node second = prev;
+        ListNode first = head;
+        ListNode second = prev;
 
         while (second != null) {
             if (first.data != second.data)
@@ -68,7 +65,7 @@ public class PalindromeLinkedList {
     }
 
     static void display() {
-        Node temp = head;
+        ListNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
