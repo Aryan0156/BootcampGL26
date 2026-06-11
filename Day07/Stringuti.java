@@ -23,5 +23,6 @@ public class Stringuti {
         for(char x : arr) {
             System.out.print(x);
         }
+        sc.close();
     }
 }
