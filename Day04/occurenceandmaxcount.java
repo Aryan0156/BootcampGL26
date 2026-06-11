@@ -1,11 +1,11 @@
 import java.util.*;
 
-class Node {
+class node {
     int data;
-    Node next;
-    Node prev;
+    node next;
+    node prev;
 
-    Node(int data) {
+    node(int data) {
         this.data = data;
         this.next = null;
         this.prev = null;
@@ -14,10 +14,10 @@ class Node {
 
 public class occurenceandmaxcount {
 
-    static Node head;
+    static node head;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        node newNode = new node(data);
 
         if (head == null) {
             head = newNode;
@@ -26,7 +26,7 @@ public class occurenceandmaxcount {
             return;
         }
 
-        Node last = head.prev;
+        node last = head.prev;
 
         last.next = newNode;
         newNode.prev = last;
@@ -40,7 +40,7 @@ public class occurenceandmaxcount {
             return 0;
 
         int cnt = 0;
-        Node temp = head;
+        node temp = head;
 
         do {
             cnt++;
@@ -54,7 +54,7 @@ public class occurenceandmaxcount {
         if (head == null)
             return;
 
-        Node temp = head;
+        node temp = head;
 
         do {
             System.out.print(temp.data + " ");
