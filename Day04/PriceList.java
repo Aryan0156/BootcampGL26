@@ -1,11 +1,11 @@
 import java.util.Scanner;
 
-class Node {
+class Naode {
     int data;
-    Node next;
-    Node prev;
+    Naode next;
+    Naode prev;
 
-    Node(int data) {
+    Naode(int data) {
         this.data = data;
         this.next = null;
         this.prev = null;
@@ -14,17 +14,17 @@ class Node {
 
 public class PriceList {
 
-    static Node head = null;
+    static Naode head = null;
 
     static void insert(int x) {
-        Node newNode = new Node(x);
+        Naode newNode = new Naode(x);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        Node temp = head;
+        Naode temp = head;
 
         while (temp.next != null) {
             temp = temp.next;
@@ -35,7 +35,7 @@ public class PriceList {
     }
 
     static void display() {
-        Node temp = head;
+        Naode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -46,7 +46,7 @@ public class PriceList {
     }
 
     static void update(int pos, int newPrice) {
-        Node temp = head;
+        Naode temp = head;
 
         while (temp != null && pos > 1) {
             temp = temp.next;
