@@ -1,27 +1,26 @@
-
-class Node {
+class DLLNode {
     int data;
-    Node next;
-    Node prev;
+    DLLNode next;
+    DLLNode prev;
 
-    Node(int data) {
+    DLLNode(int data) {
         this.data = data;
     }
 }
 
 public class ConvertToDLL {
 
-    static Node head = null;
+    static DLLNode head = null;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        DLLNode newNode = new DLLNode(data);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        Node temp = head;
+        DLLNode temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -30,8 +29,8 @@ public class ConvertToDLL {
     }
 
     static void convertToDLL() {
-        Node curr = head;
-        Node previous = null;
+        DLLNode curr = head;
+        DLLNode previous = null;
 
         while (curr != null) {
             curr.prev = previous;
@@ -41,7 +40,7 @@ public class ConvertToDLL {
     }
 
     static void displayForward() {
-        Node temp = head;
+        DLLNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -51,7 +50,7 @@ public class ConvertToDLL {
     }
 
     static void displayBackward() {
-        Node temp = head;
+        DLLNode temp = head;
 
         while (temp.next != null) {
             temp = temp.next;
