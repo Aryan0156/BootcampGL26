@@ -1,21 +1,21 @@
 import java.util.Scanner;
 
-class Node {
+class DLLNode {
     int data;
-    Node next;
-    Node prev;
+    DLLNode next;
+    DLLNode prev;
 
-    Node(int data) {
+    DLLNode(int data) {
         this.data = data;
     }
 }
 
 public class sorted {
 
-    static Node head = null;
+    static DLLNode head = null;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        DLLNode newNode = new DLLNode(data);
 
         if (head == null) {
             head = newNode;
@@ -24,7 +24,7 @@ public class sorted {
             return;
         }
 
-        Node last = head.prev;
+        DLLNode last = head.prev;
 
         last.next = newNode;
         newNode.prev = last;
@@ -37,13 +37,13 @@ public class sorted {
         if (head == null || head.next == head)
             return;
 
-        Node curr = head;
+        DLLNode curr = head;
 
         while (curr.next != head) {
 
             if (curr.data == curr.next.data) {
 
-                Node dup = curr.next;
+                DLLNode dup = curr.next;
 
                 curr.next = dup.next;
                 dup.next.prev = curr;
@@ -60,7 +60,7 @@ public class sorted {
             return;
         }
 
-        Node temp = head;
+        DLLNode temp = head;
 
         do {
             System.out.print(temp.data + " ");
@@ -71,14 +71,14 @@ public class sorted {
     }
 
     public static void main(String[] args) {
-         Scanner sc = new Scanner(System.in);
-        while(true){
-            int data = sc.nextInt();
-            if(data == -1){
-                break;
+        Scanner sc = new Scanner(System.in);
 
-            }
-            else{
+        while (true) {
+            int data = sc.nextInt();
+
+            if (data == -1) {
+                break;
+            } else {
                 insert(data);
             }
         }
@@ -90,7 +90,7 @@ public class sorted {
 
         System.out.println("After removing duplicates:");
         display();
+
         sc.close();
     }
-} 
-    
+}
