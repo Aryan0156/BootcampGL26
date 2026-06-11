@@ -1,8 +1,8 @@
-public class Node {
+public class nodes {
     int data;
     Node next;
 
-    Node(int data) {
+    nodes(int data) {
         this.data = data;
     }
 }

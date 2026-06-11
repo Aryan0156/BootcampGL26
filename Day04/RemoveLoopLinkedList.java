@@ -1,10 +1,8 @@
-
-
-class Node {
+class ListNode {
     int data;
-    Node next;
+    ListNode next;
 
-    Node(int data) {
+    ListNode(int data) {
         this.data = data;
         this.next = null;
     }
@@ -12,17 +10,18 @@ class Node {
 
 public class RemoveLoopLinkedList {
 
-    static Node head = null;
+    static ListNode head = null;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        ListNode newNode = new ListNode(data);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        Node temp = head;
+        ListNode temp = head;
+
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -31,8 +30,8 @@ public class RemoveLoopLinkedList {
     }
 
     static boolean hasLoop() {
-        Node slow = head;
-        Node fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
 
         while (fast != null && fast.next != null) {
             slow = slow.next;
@@ -42,12 +41,13 @@ public class RemoveLoopLinkedList {
                 return true;
             }
         }
+
         return false;
     }
 
     static void removeLoop() {
-        Node slow = head;
-        Node fast = head;
+        ListNode slow = head;
+        ListNode fast = head;
         boolean loopFound = false;
 
         while (fast != null && fast.next != null) {
@@ -60,8 +60,9 @@ public class RemoveLoopLinkedList {
             }
         }
 
-        if (!loopFound)
+        if (!loopFound) {
             return;
+        }
 
         slow = head;
 
@@ -80,7 +81,7 @@ public class RemoveLoopLinkedList {
     }
 
     static void display() {
-        Node temp = head;
+        ListNode temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -98,9 +99,9 @@ public class RemoveLoopLinkedList {
         insert(40);
         insert(50);
 
-        // Creating a loop: 50 -> 30
-        Node temp = head;
-        Node third = null;
+        // Creating loop: 50 -> 30
+        ListNode temp = head;
+        ListNode third = null;
 
         while (temp.next != null) {
             if (temp.data == 30) {
