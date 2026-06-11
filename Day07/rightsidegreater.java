@@ -24,5 +24,6 @@ public class rightsidegreater {
     for(int x: ans){
     System.out.print(x+" ");
     }
+    sc.close();
 }
 }

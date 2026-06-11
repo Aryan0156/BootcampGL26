@@ -28,6 +28,8 @@ public class sumofelement {
         if(!flag){
             System.out.println("Not found");
         }
+        sc.close();
     }
+    
     
 }

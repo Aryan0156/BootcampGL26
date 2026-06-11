@@ -20,5 +20,6 @@ public class inversion {
     }
     System.out.println("Answer is ");
     System.out.println(count);
+    sc.close();
 }
 }
