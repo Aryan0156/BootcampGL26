@@ -1,25 +1,26 @@
-public class nodes {
+class Nodes {
     int data;
-    Node next;
+    Nodes next;
 
-    nodes(int data) {
+    Nodes(int data) {
         this.data = data;
+        this.next = null;
     }
 }
 
-public class clone {
+public class sclone{
 
-    static Node head = null;
+    static Nodes head = null;
 
     static void insert(int data) {
-        Node newNode = new Node(data);
+        Nodes newNode = new Nodes(data);
 
         if (head == null) {
             head = newNode;
             return;
         }
 
-        Node temp = head;
+        Nodes temp = head;
         while (temp.next != null) {
             temp = temp.next;
         }
@@ -27,17 +28,17 @@ public class clone {
         temp.next = newNode;
     }
 
-    static Node cloneList(Node head) {
+    static Nodes cloneList(Nodes head) {
 
         if (head == null)
             return null;
 
-        Node newHead = new Node(head.data);
-        Node original = head.next;
-        Node copy = newHead;
+        Nodes newHead = new Nodes(head.data);
+        Nodes original = head.next;
+        Nodes copy = newHead;
 
         while (original != null) {
-            copy.next = new Node(original.data);
+            copy.next = new Nodes(original.data);
 
             copy = copy.next;
             original = original.next;
@@ -46,8 +47,8 @@ public class clone {
         return newHead;
     }
 
-    static void display(Node head) {
-        Node temp = head;
+    static void display(Nodes head) {
+        Nodes temp = head;
 
         while (temp != null) {
             System.out.print(temp.data + " ");
@@ -67,11 +68,9 @@ public class clone {
         System.out.print("Original List: ");
         display(head);
 
-        Node clonedHead = cloneList(head);
+        Nodes clonedHead = cloneList(head);
 
         System.out.print("Cloned List  : ");
         display(clonedHead);
     }
-} 
-    
-
+}
