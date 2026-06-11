@@ -25,5 +25,6 @@ public class DiagonalDifference {
         int diff = Math.abs(fd - sd);
 
         System.out.println("Diagonal Difference = " + diff);
+        sc.close();
     }
 }

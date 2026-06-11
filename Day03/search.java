@@ -23,6 +23,7 @@ public class search {
         if(!flag){
             System.out.println(x+" not found");
         }
+        sc.close();
     }
     
 }
