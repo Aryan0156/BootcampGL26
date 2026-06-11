@@ -26,5 +26,6 @@ public class BoundarySum {
         }
 
         System.out.println("Boundary Sum = " + sum);
+        sc.close();
     }
 }

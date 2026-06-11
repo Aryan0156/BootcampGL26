@@ -1,11 +1,11 @@
 import java.util.*;
 
-class Stack {
+class Stacks {
     int[] arr;
     int top;
     int size;
 
-    Stack(int size) {
+    Stacks(int size) {
         this.size = size;
         arr = new int[size];
         top = -1;
@@ -61,7 +61,7 @@ public class StackArrayDemo {
         System.out.print("Enter stack size: ");
         int n = sc.nextInt();
 
-        Stack s = new Stack(n);
+        Stacks s = new Stacks(n);
 
         while (true) {
             System.out.println("\n1. Push");
